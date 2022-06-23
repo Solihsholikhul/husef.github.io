@@ -1,7 +1,7 @@
  $('.search-button').on('click', function() {
      $.ajax({
 
-         url: 'http://www.omdbapi.com/?apikey=901fff63&s=' + $('.input-keyword').val(),
+         url: 'https://www.omdbapi.com/?apikey=901fff63&s=' + $('.input-keyword').val(),
          success: result => {
              const movies = result.Search;
              let card = '';
@@ -14,7 +14,7 @@
              //tombol di klik
              $('.modal-detail-button').on('click', function() {
                  $.ajax({
-                     url: 'http://www.omdbapi.com/?apikey=901fff63&i=' + $(this).data('imdbid'),
+                     url: 'https://www.omdbapi.com/?apikey=901fff63&i=' + $(this).data('imdbid'),
                      success: m => {
                          const movieDetail = showDetailMovie(m);
                          $('.modal-body').html(movieDetail);
@@ -40,7 +40,7 @@
  //  searchButton.addEventListener('click', function() {
 
  //              const inputKeyword = document.querySelector('.input-keyword');
- //              fetch('http://www.omdbapi.com/?apikey=901fff63&i=tt0848228&s=' + inputKeyword.value)
+ //              fetch('https://www.omdbapi.com/?apikey=901fff63&i=tt0848228&s=' + inputKeyword.value)
 
  //              .then(response => response.json())
  //                  .then(response => {
@@ -56,7 +56,7 @@
  //                      modalDetailButton.forEach(btn => {
  //                          btn.addEventListener('click', function() {
  //                              const imdbid = this.dataset.imdbid;
- //                              fetch('http://www.omdbapi.com/?apikey=901fff63&i=' + imbdid)
+ //                              fetch('https://www.omdbapi.com/?apikey=901fff63&i=' + imbdid)
  //                                  .then(response => response.json())
  //                                  .then(m => {
  //                                      const movieDetail = showDetailMovie(m);
